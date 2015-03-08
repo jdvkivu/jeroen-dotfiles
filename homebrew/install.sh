@@ -16,6 +16,7 @@ fi
 # ?
 
 # Install homebrew packages
+brew install bash bash-completion
 brew install ncdu 
 brew install coreutils spark
 
