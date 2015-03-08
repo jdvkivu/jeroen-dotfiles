@@ -146,3 +146,14 @@ alias reload="exec $SHELL -l"
 # Easily switch between `io.js` and `Node.js`
 #alias use-iojs="brew unlink node && brew link --force iojs"
 #alias use-node="brew unlink iojs && brew link --force node"
+
+# Docker shortcuts
+#
+# cleanup exited containers
+alias dcc='docker rm $(docker ps -aqf status=exited)'
+
+# cleanup dangling images
+alias dci='docker rmi $(docker images -qf dangling=true)'
+
+# clean all
+alias dca='dcc && dci'
