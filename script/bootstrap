@@ -145,10 +145,13 @@ install_dotfiles () {
 # install/update programs
 source script/setup.sh
 
-setup_gitconfig
+#setup_gitconfig
+
 # link the dotfiles
 install_dotfiles
 
+# source bash_profile to activate all dotfiles
+source ~/.bash_profile
 
 echo ''
 echo '  All installed!'

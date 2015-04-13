@@ -12,13 +12,18 @@ then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Check for cask
-# ?
+
+# Install cask for graphical installations
+brew install caskroom/cask/brew-cask
+
+# tap versions for alternate versions of programs
+brew tap homebrew/versions
+brew tap caskroom/versions
 
 # Install homebrew packages
 brew install bash bash-completion
 brew install ncdu 
-brew install coreutils spark
-
+#brew install coreutils spark
+#brew install maven
 
 exit 0
