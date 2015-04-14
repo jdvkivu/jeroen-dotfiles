@@ -15,19 +15,16 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+
+###############################################################################
+# Kerberos                                                                    #
+###############################################################################
+defaults write com.google.Chrome AuthServerWhitelist "*.intranet"
+defaults write com.google.Chrome AuthNegotiateDelegateWhitelist "*.intranet"
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
-
-# Always open everything in Finder's list view. This is important.
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
-
-# Show the ~/Library folder.
-chflags nohidden ~/Library
-
-# Run the screensaver if we're in the bottom-left hot corner.
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -110,6 +107,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 5
 #defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
+# there are nice aliases to show/hide the files
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
