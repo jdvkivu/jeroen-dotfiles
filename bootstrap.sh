@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #
 # bootstrap installs things.
 
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")"
 DOTFILES_ROOT=$(pwd)
 
 set -e
@@ -27,29 +27,6 @@ fail () {
   echo ''
   exit
 }
-
-setup_gitconfig () {
-  if ! [ -f system/gitconfig.symlink ]
-  then
-    info 'setup gitconfig'
-
-    git_credential='cache'
-    if [ "$(uname -s)" == "Darwin" ]
-    then
-      git_credential='osxkeychain'
-    fi
-
-    user ' - What is your github author name?'
-    read -e git_authorname
-    user ' - What is your github author email?'
-    read -e git_authoremail
-
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
-
-    success 'gitconfig'
-  fi
-}
-
 
 # link files and if wanted backup the existing destination
 link_file () {
@@ -133,9 +110,9 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink')
+  for src in $(find "$DOTFILES_ROOT" -maxdepth 1 -name '*.symlink')
   do
-    # change logic here if you need to symlink files without a preceding .
+    # change logic here if you need to symlink files to a target without a preceding .
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
@@ -143,14 +120,26 @@ install_dotfiles () {
 
 
 # install/update programs
-source script/setup.sh
+#echo 'Installing programs and utilities'
+#source homebrew/install.sh
+
+# change to bash 4 (installed by homebrew)
+#BASHPATH=$(brew --prefix)/bin/bash
+#sudo echo $BASHPATH >> /etc/shells
+#chsh -s $BASHPATH # will set for current user only.
+#echo $BASH_VERSION # should be 4.x not the old 3.2.X
+
+# set osx defaults
+#echo 'Running OSX defaults'
+#source osx/set-defaults.sh
 
 #setup_gitconfig
-
 # link the dotfiles
+echo 'Installing dotfiles'
 install_dotfiles
 
-# source bash_profile to activate all dotfiles
+# activate by sourcing .bash_profile
+echo 'Sourcing .bash_profile'
 source ~/.bash_profile
 
 echo ''

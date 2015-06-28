@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Sets reasonable OS X defaults.
 #
@@ -15,19 +15,16 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+
+###############################################################################
+# Intranet security warnings be gone                                          #
+###############################################################################
+defaults write com.google.Chrome AuthServerWhitelist "*.intranet"
+defaults write com.google.Chrome AuthNegotiateDelegateWhitelist "*.intranet"
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
-
-# Always open everything in Finder's list view. This is important.
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
-
-# Show the ~/Library folder.
-chflags nohidden ~/Library
-
-# Run the screensaver if we're in the bottom-left hot corner.
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -110,6 +107,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 5
 #defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
+# there are nice aliases to show/hide the files
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
@@ -161,6 +159,9 @@ chflags nohidden ~/Library
 # Add iOS Simulator to Launchpad
 #sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app" "/Applications/iOS Simulator.app"
 
+# Automatically hide and show the Dock 
+defaults write com.apple.dock autohide -bool true
+
 # Hot corners
 # Possible values:
 #  0: no-op
@@ -209,8 +210,7 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 ###############################################################################
 
 for app in "Activity Monitor" "cfprefsd" \
-	"Dock" "Finder" "SystemUIServer" \
-	"Terminal" ; do
+	"Dock" "Finder" "SystemUIServer" ; do
 	killall "${app}" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
