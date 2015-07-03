@@ -65,10 +65,11 @@ brew cask install java
 brew cask install java7
 
 brew      install maven
+# install maven completions
 brew      install gradle
 brew cask install eclipse-java
 brew cask install intellij-idea
-
+# install spring boot cli from pivotal tap
 
 ####################################
 # Virtual machine tools            #
@@ -76,8 +77,13 @@ brew cask install intellij-idea
 
 brew cask install virtualbox
 brew cask install vagrant
-brew cask install boot2docker
+#brew cask install boot2docker
 
+####################################
+# Entertainment                    #
+####################################
+
+brew cask install spotify
 
 # Remove outdated versions from the cellar
 # brew cleanup
