@@ -65,7 +65,7 @@ brew cask install java
 brew cask install java7
 
 brew      install maven
-# install maven completions
+brew      install homebrew/completions/maven-completion
 brew      install gradle
 brew cask install eclipse-java
 brew cask install intellij-idea
