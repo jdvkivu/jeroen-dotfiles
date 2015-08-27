@@ -32,6 +32,8 @@ brew upgrade
 ####################################
 # Utils                            #
 ####################################
+brew install ag
+
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -55,25 +57,18 @@ brew install ncdu
 brew install tree
 # brew install coreutils 
 
-# a small util to show bar graph
-# spark 0 30 55 80 33 150
-# ▁▂▃▅▂▇
-brew install spark
-
 
 ####################################
 # Graph tools                      #
 ####################################
-#brew cask install atom
-#brew cask install iterm2
 brew cask install sublime-text
 brew cask install keepassx
-brew cask install cheatsheet
+brew cask install dash
 
 ####################################
 # Dev                              #
 ####################################
-#brew cask install sourcetree
+brew cask install sourcetree
 brew cask install java7
 brew      install maven
 brew cask install eclipse-java
@@ -84,9 +79,16 @@ brew cask install intellij-idea
 # Virtual machine tools            #
 ####################################
 
-# virtualbox
-# vagrant
-# boot2ddocker
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install boot2docker
+
+
+####################################
+# Entertainment                    #
+####################################
+
+brew cask install spotify
 
 
 # Remove outdated versions from the cellar
