@@ -119,21 +119,6 @@ install_dotfiles () {
 }
 
 
-# install/update programs
-#echo 'Installing programs and utilities'
-#source homebrew/install.sh
-
-# change to bash 4 (installed by homebrew)
-#BASHPATH=$(brew --prefix)/bin/bash
-#sudo echo $BASHPATH >> /etc/shells
-#chsh -s $BASHPATH # will set for current user only.
-#echo $BASH_VERSION # should be 4.x not the old 3.2.X
-
-# set osx defaults
-#echo 'Running OSX defaults'
-#source osx/set-defaults.sh
-
-#setup_gitconfig
 # link the dotfiles
 echo 'Installing dotfiles'
 install_dotfiles
