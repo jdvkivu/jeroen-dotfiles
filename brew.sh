@@ -28,7 +28,7 @@ brew install ag
 
 # Install Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
-#brew install bash
+brew install bash
 
 # regular bash-completion package is held back to an older release, so we get latest from versions.
 #   github.com/Homebrew/homebrew/blob/master/Library/Formula/bash-completion.rb#L3-L4
@@ -77,7 +77,7 @@ brew cask install intellij-idea
 
 brew cask install virtualbox
 brew cask install vagrant
-#brew cask install boot2docker
+brew cask install boot2docker
 
 ####################################
 # Entertainment                    #
