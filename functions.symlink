@@ -12,6 +12,12 @@ function setjdk() {
   java -version  
 }  
 
+# List all jdk's (could be done with an alias but it is more logical 
+# to have near setjdk function)
+function listjdk() {
+	/usr/libexec/java_home -V
+}
+
 function removeFromPath() {  
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")  
 }
