@@ -177,8 +177,8 @@ defaults write com.apple.dock autohide -bool true
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
-# Top left screen corner → no-op
-defaults write com.apple.dock wvous-tl-corner -int 0
+# Top left screen corner → Disable screen saver
+defaults write com.apple.dock wvous-tl-corner -int 6
 defaults write com.apple.dock wvous-tl-modifier -int 0
 # Top right screen corner → Disable screen saver
 defaults write com.apple.dock wvous-tr-corner -int 6
