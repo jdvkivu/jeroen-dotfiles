@@ -37,7 +37,7 @@ brew install homebrew/versions/bash-completion2
 # nice folder size utility
 brew install ncdu 
 brew install tree
-
+brew install gpg
 
 ####################################
 # Graph tools                      #
