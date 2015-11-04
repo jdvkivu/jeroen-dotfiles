@@ -71,6 +71,8 @@ brew cask install eclipse-java
 brew cask install intellij-idea
 # install spring boot cli from pivotal tap
 
+brew      install arduino
+
 ####################################
 # Virtual machine tools            #
 ####################################
