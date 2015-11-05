@@ -71,7 +71,7 @@ brew cask install eclipse-java
 brew cask install intellij-idea
 # install spring boot cli from pivotal tap
 
-brew      install arduino
+brew cask install arduino
 
 ####################################
 # Virtual machine tools            #
@@ -79,7 +79,14 @@ brew      install arduino
 
 brew cask install virtualbox
 brew cask install vagrant
-brew cask install boot2docker
+
+# Docker stuff
+brew install docker
+brew install docker-machine
+brew install docker-compose
+brew install homebrew/completions/docker-completion
+brew install homebrew/completions/docker-machine-completion
+brew cask install kitematic
 
 ####################################
 # Entertainment                    #
