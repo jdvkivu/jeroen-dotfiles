@@ -68,7 +68,7 @@ brew      install maven
 brew      install homebrew/completions/maven-completion
 brew      install gradle
 brew cask install eclipse-java
-brew cask install intellij-idea
+brew cask install intellij-idea-ce
 # install spring boot cli from pivotal tap
 
 brew cask install arduino
