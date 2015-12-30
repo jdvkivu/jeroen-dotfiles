@@ -57,6 +57,7 @@ brew cask install firefox
 # Dev                              #
 ####################################
 brew cask install sourcetree
+brew cask install gitup
 
 # Java 8
 brew cask install java

@@ -17,7 +17,7 @@ brew install caskroom/cask/brew-cask
 
 # Get alternate versions
 brew tap homebrew/versions
-brew tap caskroom/versions
+brew tap Caskroom/cask/versions
 
 # Upgrade any already-installed formulae
 echo "Upgrading installed formulas"
