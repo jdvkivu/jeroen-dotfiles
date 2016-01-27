@@ -125,7 +125,7 @@ install_dotfiles
 
 # activate by sourcing .bash_profile
 echo 'Sourcing .bash_profile'
-source ~/.bash_profile
+~/.bash_profile
 
 echo ''
 echo '  All installed!'
