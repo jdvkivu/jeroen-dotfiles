@@ -14,6 +14,7 @@
 ####################################
 # Utils                            #
 ####################################
+# find it all, see also http://conqueringthecommandline.com/book/ack_ag
 brew install ag
 
 # Install GNU core utilities (those that come with OS X are outdated)
@@ -44,7 +45,7 @@ brew install gpg
 ####################################
 brew cask install sublime-text
 brew cask install keepassx
-brew cask install dash
+#brew cask install dash
 brew cask install disk-inventory-x
 
 ####################################
@@ -63,7 +64,7 @@ brew cask install gitup
 brew cask install java
 
 # Java 7
-brew cask install java7
+#brew cask install java7
 
 brew      install maven
 brew      install homebrew/completions/maven-completion
@@ -73,6 +74,9 @@ brew cask install intellij-idea-ce
 # install spring boot cli from pivotal tap
 
 brew cask install arduino
+
+# MySQL client
+brew cask install sequel-pro
 
 ####################################
 # Virtual machine tools            #
@@ -87,7 +91,7 @@ brew install docker-machine
 brew install docker-compose
 brew install homebrew/completions/docker-completion
 brew install homebrew/completions/docker-machine-completion
-brew cask install kitematic
+#brew cask install kitematic
 
 ####################################
 # Entertainment                    #
