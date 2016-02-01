@@ -3,12 +3,12 @@ export PATH="$HOME/bin:$PATH";
 
 # set prompt to show in yellow so you recognise easily where you started a command after it spits out 
 # many lines of output
-export PS1="\e[0;33m\h:\W \u\$\e[m "
+export PS1="\e[0;33m\h:\w \$\e[m "
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{functions,path,bash_prompt,exports,aliases,extra,rvmenv}; do
+for file in ~/.{functions,path,bash_prompt,exports,aliases,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
