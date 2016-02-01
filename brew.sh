@@ -41,17 +41,26 @@ brew install tree
 brew install gpg
 
 ####################################
-# Graph tools                      #
+# Graph utils                      #
 ####################################
 brew cask install sublime-text
 brew cask install keepassx
 #brew cask install dash
 brew cask install disk-inventory-x
+brew cask install dropbox
+brew cask install iterm2
+brew cask install skype
+
+# activity monitoring
+brew cask install xrg
+
+# vpn connectivity
+brew cask install viscosity
 
 ####################################
 # Browsers                         #
 ####################################
-#brew cask install google-chrome
+brew cask install google-chrome
 brew cask install firefox
 
 ####################################
@@ -69,7 +78,7 @@ brew cask install java
 brew      install maven
 brew      install homebrew/completions/maven-completion
 brew      install gradle
-brew cask install eclipse-java
+#brew cask install eclipse-java
 brew cask install intellij-idea-ce
 # install spring boot cli from pivotal tap
 
@@ -89,8 +98,6 @@ brew cask install vagrant
 brew install docker
 brew install docker-machine
 brew install docker-compose
-brew install homebrew/completions/docker-completion
-brew install homebrew/completions/docker-machine-completion
 #brew cask install kitematic
 
 ####################################
