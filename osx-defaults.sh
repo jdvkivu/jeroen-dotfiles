@@ -19,8 +19,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # Intranet security warnings be gone                                          #
 ###############################################################################
-defaults write com.google.Chrome AuthServerWhitelist "*.intranet"
-defaults write com.google.Chrome AuthNegotiateDelegateWhitelist "*.intranet"
+#defaults write com.google.Chrome AuthServerWhitelist "*.intranet"
+#defaults write com.google.Chrome AuthNegotiateDelegateWhitelist "*.intranet"
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -39,6 +39,9 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 
 # Disable Notification Center and remove the menu bar icon
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+
+# Show time in menu bar with date and seconds
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm:ss"
 
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -78,7 +81,8 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 #sudo systemsetup -settimezone "Europe/Amsterdam" > /dev/null
@@ -184,8 +188,8 @@ defaults write com.apple.dock wvous-tl-modifier -int 0
 defaults write com.apple.dock wvous-tr-corner -int 6
 defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom right screen corner → Start screen saver
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 5
+defaults write com.apple.dock wvous-br-modifier -int 0
 # Bottom left screen corner → Desktop
 defaults write com.apple.dock wvous-bl-corner -int 4
 defaults write com.apple.dock wvous-bl-modifier -int 0
