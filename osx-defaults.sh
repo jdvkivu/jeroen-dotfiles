@@ -70,6 +70,9 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
+# bluetooth mouse swipe between pages with one finger
+defaults write NSGlobalDomain AppleEnableMouseSwipeNavigateWithScrolls -bool true
+
 # Trackpad: tracking speed
 defaults write NSGlobalDomain com.apple.trackpad.scaling -string "1.5"
 
@@ -126,7 +129,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Finder: allow text selection in Quick Look
+# Finder: allow text selection in Quick Look. Does not work in El Capitan.
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Display full POSIX path as Finder window title
