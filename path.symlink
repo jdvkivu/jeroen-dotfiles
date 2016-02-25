@@ -1,5 +1,8 @@
 #export PATH=$PATH:`$(brew --prefix coreutils)/libexec/gnubin`
 
 # Setting Java path. There is a function setjdk defined to change java versions
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export PATH=$JAVA_HOME/bin:$PATH
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#export PATH=$JAVA_HOME/bin:$PATH
+
+# Homebrew's sbin path.
+export PATH="/usr/local/sbin:$PATH"

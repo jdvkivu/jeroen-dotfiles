@@ -17,6 +17,9 @@
 # find it all, see also http://conqueringthecommandline.com/book/ack_ag
 brew install ag
 
+# network utility
+brew install mtr
+
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 #brew install coreutils
@@ -37,8 +40,12 @@ brew install homebrew/versions/bash-completion2
 
 # nice folder size utility
 brew install ncdu 
+
 brew install tree
 brew install gpg
+
+# 7z
+brew cask install keka
 
 ####################################
 # Graph utils                      #
@@ -56,6 +63,10 @@ brew cask install xrg
 
 # vpn connectivity
 brew cask install viscosity
+
+# video playback and conversions
+brew cask install vlc
+brew cask install handbrake
 
 ####################################
 # Browsers                         #
