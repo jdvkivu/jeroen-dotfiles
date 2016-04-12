@@ -51,6 +51,7 @@ brew cask install keka
 # Graph utils                      #
 ####################################
 brew cask install sublime-text
+#brew cask install komodo-edit
 brew cask install keepassx
 #brew cask install dash
 brew cask install disk-inventory-x
@@ -97,6 +98,7 @@ brew cask install arduino
 
 # MySQL client
 brew cask install sequel-pro
+brew cask install mysqlworkbench
 
 ####################################
 # Virtual machine tools            #
