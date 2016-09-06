@@ -17,8 +17,14 @@
 # find it all, see also http://conqueringthecommandline.com/book/ack_ag
 brew install ag
 
+# text based browser
+brew install links
+
 # network utility
 brew install mtr
+
+# cpu monitor
+brew install htop
 
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -56,7 +62,7 @@ brew cask install keepassx
 #brew cask install dash
 brew cask install disk-inventory-x
 brew cask install dropbox
-brew cask install iterm2
+#brew cask install iterm2
 brew cask install skype
 
 # activity monitoring
@@ -74,6 +80,11 @@ brew cask install handbrake
 ####################################
 brew cask install google-chrome
 brew cask install firefox
+
+####################################
+# Office                           #
+####################################
+#brew cask install openoffice
 
 ####################################
 # Dev                              #
@@ -99,6 +110,12 @@ brew cask install arduino
 # MySQL client
 brew cask install sequel-pro
 brew cask install mysqlworkbench
+
+# Heroku toolbelt
+#brew install heroku
+
+# Openshift
+#brew install openshift-cli
 
 ####################################
 # Virtual machine tools            #
