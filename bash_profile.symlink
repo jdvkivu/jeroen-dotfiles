@@ -3,7 +3,11 @@ export PATH="$HOME/bin:$PATH";
 
 # set prompt to show in yellow so you recognise easily where you started a command after it spits out 
 # many lines of output
-export PS1="\e[0;33m\h:\w \$\e[m "
+#export PS1="\e[0;33m\h:\w \$\e[m "
+export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWDIRTYSTATE=true
+source ~/git-prompt.sh
+export PS1='\[\033[0;32m\]\u@\h\[\033[00m\]:\[\033[0;33m\]\w\[\033[00m\]$(__git_ps1 " (%s)") $ '
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
