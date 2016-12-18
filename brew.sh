@@ -65,6 +65,9 @@ brew cask install dropbox
 #brew cask install iterm2
 brew cask install skype
 
+# image writer
+brew cask install etcher
+
 # activity monitoring
 brew cask install xrg
 
