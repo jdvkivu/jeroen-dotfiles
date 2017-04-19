@@ -124,3 +124,7 @@ alias dli='docker images'
 # list running docker containers
 alias dps='docker ps'
 alias dpsa='docker ps -a'
+
+## Raspberry pi's
+# clusterhat controller
+alias controller='ssh pi@controller.local'
