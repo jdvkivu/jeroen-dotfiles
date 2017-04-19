@@ -57,6 +57,7 @@ brew cask install keka
 # Graph utils                      #
 ####################################
 brew cask install sublime-text
+brew cask install atom
 #brew cask install komodo-edit
 brew cask install keepassx
 #brew cask install dash
@@ -110,9 +111,10 @@ brew cask install intellij-idea-ce
 
 brew cask install arduino
 
-# MySQL client
+# MySQL server + client
+brew install mysql
 brew cask install sequel-pro
-brew cask install mysqlworkbench
+#brew cask install mysqlworkbench
 
 # Heroku toolbelt
 #brew install heroku
