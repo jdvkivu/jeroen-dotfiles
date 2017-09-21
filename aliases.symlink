@@ -8,11 +8,9 @@ alias -- -="cd -"
 # Shortcuts
 alias g="git"
 alias hg='history | grep'
+
 # timestamp
 alias ts='date "+%Y%m%d%H%M%S"'
-
-# setting up the sublime symlink
-ln -sf "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

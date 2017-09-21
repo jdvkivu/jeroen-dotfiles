@@ -39,10 +39,7 @@ brew install htop
 # Install Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
 brew install bash
-
-# regular bash-completion package is held back to an older release, so we get latest from versions.
-#   github.com/Homebrew/homebrew/blob/master/Library/Formula/bash-completion.rb#L3-L4
-brew install homebrew/versions/bash-completion2
+brew install bash-completion@2
 
 # nice folder size utility
 brew install ncdu 
@@ -56,7 +53,7 @@ brew cask install keka
 ####################################
 # Graph utils                      #
 ####################################
-brew cask install sublime-text
+#brew cask install sublime-text
 brew cask install atom
 #brew cask install komodo-edit
 brew cask install keepassx
@@ -70,7 +67,7 @@ brew cask install skype
 brew cask install etcher
 
 # activity monitoring
-brew cask install xrg
+#brew cask install xrg
 
 # vpn connectivity
 brew cask install viscosity
@@ -103,18 +100,16 @@ brew cask install java
 #brew cask install java7
 
 brew      install maven
-brew      install homebrew/completions/maven-completion
-brew      install gradle
+brew      install maven-completion
+#brew      install gradle
 #brew cask install eclipse-java
 brew cask install intellij-idea-ce
-# install spring boot cli from pivotal tap
 
-brew cask install arduino
+#brew cask install arduino
 
 # MySQL server + client
 brew install mysql
 brew cask install sequel-pro
-#brew cask install mysqlworkbench
 
 # Heroku toolbelt
 #brew install heroku
