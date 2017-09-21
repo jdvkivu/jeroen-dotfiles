@@ -8,6 +8,8 @@ alias -- -="cd -"
 # Shortcuts
 alias g="git"
 alias hg='history | grep'
+# timestamp
+alias ts='date "+%Y%m%d%H%M%S"'
 
 # setting up the sublime symlink
 ln -sf "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
@@ -68,9 +70,6 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 
 # OS X has no `sha1sum`, so use `shasum` as a fallback
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
-
-# Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 #alias cleands="find . -type f -name '*.DS_Store' -ls -delete"

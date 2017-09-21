@@ -1,25 +1,25 @@
 # Change JDK version including path settings, this is OSX specific
-function setjdk() {  
-  if [ $# -ne 0 ]; then  
-   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'  
-   if [ -n "${JAVA_HOME+x}" ]; then  
-    removeFromPath $JAVA_HOME/bin  
-   fi  
-   export JAVA_HOME=`/usr/libexec/java_home -v $@`  
-   export PATH=$JAVA_HOME/bin:$PATH  
-  fi  
-  echo JAVA_HOME set to $JAVA_HOME  
-  java -version  
-}  
+function setjdk() {
+  if [ $# -ne 0 ]; then
+   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+   if [ -n "${JAVA_HOME+x}" ]; then
+    removeFromPath $JAVA_HOME/bin
+   fi
+   export JAVA_HOME=`/usr/libexec/java_home -v $@`
+   export PATH=$JAVA_HOME/bin:$PATH
+  fi
+  echo JAVA_HOME set to $JAVA_HOME
+  java -version
+}
 
-# List all jdk's (could be done with an alias but it is more logical 
+# List all jdk's (could be done with an alias but it is more logical
 # to have near setjdk function)
 function listjdk() {
 	/usr/libexec/java_home -V
 }
 
-function removeFromPath() {  
-  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")  
+function removeFromPath() {
+  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
 }
 
 # a function to test which os we are running on
@@ -254,4 +254,9 @@ function o() {
 # small enough for one screen.
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
+}
+
+# change dir and list files
+cdl() {
+    cd "$@" && ls -alhF
 }
