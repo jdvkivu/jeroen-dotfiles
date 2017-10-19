@@ -10,7 +10,7 @@ alias g="git"
 alias hg='history | grep'
 
 # timestamp
-alias ts='date "+%Y%m%d%H%M%S"'
+alias ts='date "+%Y%m%d%H%M%S" | pbcopy && pbpaste'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
