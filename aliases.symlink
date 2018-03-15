@@ -107,6 +107,10 @@ alias reload="exec $SHELL -l"
 
 # Docker shortcuts
 #
+# start docker machine
+alias dmstart='docker-machine start && eval "$(docker-machine env default)"'
+alias dmeval='eval "$(docker-machine env default)"'
+
 # cleanup exited containers
 alias dcc='docker rm $(docker ps -aqf status=exited)'
 
@@ -126,3 +130,10 @@ alias dpsa='docker ps -a'
 ## Raspberry pi's
 # clusterhat controller
 alias controller='ssh pi@controller.local'
+
+## vagrant commands
+alias vh='vagrant halt'
+alias vu='vagrant up'
+alias vs='vagrant ssh'
+alias vus='vagrant up && vagrant ssh'
+
