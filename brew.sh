@@ -125,9 +125,9 @@ brew cask install virtualbox
 brew cask install vagrant
 
 # Docker stuff
-brew install docker
-brew install docker-machine
-brew install docker-compose
+brew cask install docker
+#brew install docker-machine
+#brew install docker-compose
 #brew cask install kitematic
 
 ####################################
