@@ -1,4 +1,4 @@
-# First use
+# Dotfiles setup
 Checkout or download this project to any location in your computer.
 
 There are 3 main bootstrapping scripts:
