@@ -130,6 +130,7 @@ alias dpsa='docker ps -a'
 ## Raspberry pi's
 # clusterhat controller
 alias controller='ssh pi@controller.local'
+alias pizerow6='ssh pi@pizerow6.home'
 
 ## vagrant commands
 alias vh='vagrant halt'
@@ -137,3 +138,6 @@ alias vu='vagrant up'
 alias vs='vagrant ssh'
 alias vus='vagrant up && vagrant ssh'
 
+## maven
+# remove artifact from local repo
+alias rmartifact='mvn build-helper:remove-project-artifact'
