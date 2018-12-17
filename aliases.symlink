@@ -141,3 +141,11 @@ alias vus='vagrant up && vagrant ssh'
 ## maven
 # remove artifact from local repo
 alias rmartifact='mvn build-helper:remove-project-artifact'
+
+##
+# fm
+alias fmc1='ssh gary@fmc1'
+alias fma1='ssh gary@fma1'
+alias fmp1='ssh gary@fmp1'
+alias fmdb1='ssh gary@fmdb1'
+alias fmdb2='ssh gary@fmdb2'
