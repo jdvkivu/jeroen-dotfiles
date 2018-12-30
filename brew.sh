@@ -6,7 +6,7 @@
 # using Homebrew.
 
 # Check for Homebrew
-./install-brew.sh
+#./install-brew.sh
 
 # Install command-line tools using Homebrew
 
@@ -48,13 +48,14 @@ brew install tree
 brew install gpg
 
 # 7z
-brew cask install keka
+#brew cask install keka
+brew install p7zip
 
 ####################################
 # Graph utils                      #
 ####################################
-#brew cask install sublime-text
-brew cask install atom
+brew cask install sublime-text
+#brew cask install atom
 #brew cask install komodo-edit
 brew cask install keepassx
 #brew cask install dash
@@ -64,13 +65,13 @@ brew cask install dropbox
 brew cask install skype
 
 # image writer
-brew cask install etcher
+brew cask install balenaetcher
 
 # activity monitoring
 #brew cask install xrg
 
 # vpn connectivity
-brew cask install viscosity
+#brew cask install viscosity
 
 # video playback and conversions
 brew cask install vlc
@@ -91,13 +92,17 @@ brew cask install firefox
 # Dev                              #
 ####################################
 brew cask install sourcetree
-brew cask install gitup
+#brew cask install gitup
 
-# Java 8
+# add availability for older evrsions of java
+brew tap homebrew/cask-versions
+
+# Latest Java
 brew cask install java
 
-# Java 7
-#brew cask install java7
+# Java 8
+brew cask install java8
+
 
 brew      install maven
 brew      install maven-completion
@@ -125,8 +130,8 @@ brew cask install virtualbox
 brew cask install vagrant
 
 # Docker stuff
-brew cask install docker
-#brew install docker-machine
+brew install docker
+brew install docker-machine
 #brew install docker-compose
 #brew cask install kitematic
 

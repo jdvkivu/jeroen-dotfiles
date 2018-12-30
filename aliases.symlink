@@ -6,8 +6,8 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 
 # Shortcuts
-alias g="git"
-alias hg='history | grep'
+#alias g="git"
+alias hg='history | grep -i'
 
 # timestamp
 alias ts='date "+%Y%m%d%H%M%S" | pbcopy && pbpaste'

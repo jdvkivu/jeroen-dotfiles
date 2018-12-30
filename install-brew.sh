@@ -4,16 +4,12 @@
 if test ! $(which brew)
 then
   echo "  Installing Homebrew for you."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Make sure we’re using the latest Homebrew
 echo "Updating brew"
 brew update
-
-# Install cask
-echo "Installing Caskroom"
-brew tap caskroom/cask
 
 # Upgrade any already-installed formulae
 echo "Upgrading installed formulas"
