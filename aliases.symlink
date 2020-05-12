@@ -5,12 +5,16 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 
+## 
 # Shortcuts
-#alias g="git"
 alias hg='history | grep -i'
 
 # timestamp
 alias ts='date "+%Y%m%d%H%M%S" | pbcopy && pbpaste'
+
+# Random alpha numeric string
+alias randomstring="head -c 23 /dev/urandom | base64 | tr -d '/+=' | cut -c1-23"
+alias randomnr='head -c 100 /dev/urandom | base64 | tr -dc 0-9 | cut -c1-10'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -117,8 +121,11 @@ alias dcc='docker rm $(docker ps -aqf status=exited)'
 # cleanup dangling images
 alias dci='docker rmi $(docker images -qf dangling=true)'
 
+# cleanup dangling volumes
+alias dcv='docker volume rm $(docker volume ls -qf dangling=true)'
+
 # clean all
-alias dca='dcc && dci'
+alias dca='dcc && dci && dcv'
 
 # list all docker images
 alias dli='docker images'
@@ -126,6 +133,10 @@ alias dli='docker images'
 # list running docker containers
 alias dps='docker ps'
 alias dpsa='docker ps -a'
+
+# start stop MySQL 5.7 instance
+alias dmsqlstart='docker run --rm --name dmsql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=system -d mysql:5.7'
+alias dmsqlstop='docker stop dmsql && docker rm dmsql'
 
 ## Raspberry pi's
 # clusterhat controller
@@ -144,8 +155,18 @@ alias rmartifact='mvn build-helper:remove-project-artifact'
 
 ##
 # fm
+# fm servers
 alias fmc1='ssh gary@fmc1'
 alias fma1='ssh gary@fma1'
 alias fmp1='ssh gary@fmp1'
 alias fmdb1='ssh gary@fmdb1'
 alias fmdb2='ssh gary@fmdb2'
+# fm local
+alias cdmochila='cd ~/development/fm/mochila'
+
+##
+# op
+alias opaccweb01='ssh hz-acc-proxywebapp01'
+alias opaccmongo01='ssh hz-acc-fe-mongo01'
+alias opprodweb01='ssh hz-prod-proxywebapp01'
+alias opprodmongo01='ssh hz-prod-fe-mongo01'
