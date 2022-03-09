@@ -154,19 +154,16 @@ alias vus='vagrant up && vagrant ssh'
 alias rmartifact='mvn build-helper:remove-project-artifact'
 
 ##
-# fm
-# fm servers
-alias fmc1='ssh gary@fmc1'
-alias fma1='ssh gary@fma1'
-alias fmp1='ssh gary@fmp1'
-alias fmdb1='ssh gary@fmdb1'
-alias fmdb2='ssh gary@fmdb2'
-# fm local
-alias cdmochila='cd ~/development/fm/mochila'
+# sportlink
+alias gcp-dbsystem='ssh opc@gcp-dbsystem'
+alias plg-ora='ssh opc@plg-ora'
 
-##
-# op
-alias opaccweb01='ssh hz-acc-proxywebapp01'
-alias opaccmongo01='ssh hz-acc-fe-mongo01'
-alias opprodweb01='ssh hz-prod-proxywebapp01'
-alias opprodmongo01='ssh hz-prod-fe-mongo01'
+alias zeus1='ssh jdevries@zeus1.sportlink-infra.net'
+alias zeus2='ssh jdevries@zeus2.sportlink-infra.net'
+alias zeus3='ssh jdevries@zeus3.sportlink-infra.net'
+alias zeus4='ssh jdevries@zeus4.sportlink-infra.net'
+alias zeus5='ssh jdevries@zeus5.sportlink-infra.net'
+alias zeus6='ssh jdevries@zeus6.sportlink-infra.net'
+alias zeus7='ssh jdevries@zeus7.sportlink-infra.net'
+alias zeus8='ssh jdevries@zeus8.sportlink-infra.net'
+
