@@ -167,3 +167,7 @@ alias zeus6='ssh jdevries@zeus6.sportlink-infra.net'
 alias zeus7='ssh jdevries@zeus7.sportlink-infra.net'
 alias zeus8='ssh jdevries@zeus8.sportlink-infra.net'
 
+alias kphoebe='export KUBECONFIG=/Users/jeroen/Dropbox/work/sportlink/jdevries-phoebe.kubeconfig && kubectl config set-context phoebe --namespace=test'
+alias katlas='export KUBECONFIG=/Users/jeroen/Dropbox/work/sportlink/jdevries-atlas.kubeconfig && kubectl config set-context atlas --namespace=prod'
+alias kpg='unset KUBECONFIG && gcloud auth login && gcloud --project=playground-294110 container clusters get-credentials pg20210317 --zone=europe-west4-c'
+
